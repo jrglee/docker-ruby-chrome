@@ -26,7 +26,7 @@ RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/2.1
 RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/
 RUN chmod ugo+rx /usr/bin/chromedriver
 
-RUN gem install bundler
+RUN gem install bundler nokogiri
 
 ADD docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
